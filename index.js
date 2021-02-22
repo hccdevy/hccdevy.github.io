@@ -5,7 +5,7 @@ function setGitLogs() {
       let git = document.querySelector(".git");
       git.innerHTML = "";
 
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 21; i++) {
         let modified = new Date(commits[i].commit.committer.date)
           .toString()
           .slice(0, 25);
