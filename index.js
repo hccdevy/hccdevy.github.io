@@ -1,3 +1,5 @@
+/* Start of Recent Changes code */
+// This is just to display the recent changes from GitHub (where we're hosting our website)
 function setGitLogs() {
   fetch("https://api.github.com/repos/hccdevy/hccdevy.github.io/commits")
     .then((response) => response.json())
@@ -20,5 +22,10 @@ function setGitLogs() {
       }
     });
 }
-
 setGitLogs();
+/* End of recent changes code */
+
+// Get the footer and div and add the year to it
+let footer = document.querySelector(".footer");
+let currentYear = new Date().getFullYear();
+footer.textContent = footer.textContent + " " + currentYear;
